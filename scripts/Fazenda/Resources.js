@@ -2,17 +2,18 @@
    quantidade: 10,
    dom: document.getElementById('dinheirotxt'),
 
-   Set(){
+   Set: ()=>{
+    console.log(this);
     this.dom.innerHTML = this.quantidade;
     this.checkValues();
    },
 
-   Take(q){
+   Take: (q)=>{
       this.quantidade -= q;
       this.Set();
    },
 
-   Add(q){
+   Add: (q)=>{
       console.log(this.quantidade);
       this.quantidade += q;
       console.log(this.quantidade);
@@ -20,7 +21,7 @@
    },
 
 
-   checkValues(){
+   checkValues: ()=>{
     const values = document.getElementsByClassName('value');
     const maizinho = document.getElementsByClassName('maizinho');
 
@@ -33,7 +34,7 @@
       
       if(ehOficina && !cabaMorreuB && caminhao.canUpg(upgId)){
        const index = parseInt(values[i].id.charAt(values[i].id.length - 1));
-       maizinho[index].style.display = 'block';
+       maizinho[index].style.display = 'visible';
       }
      }
      else{
@@ -41,7 +42,7 @@
 
       if(ehOficina){
        const index = parseInt(values[i].id.charAt(values[i].id.length - 1));
-       maizinho[index].style.display = 'none';
+       maizinho[index].style.visibility = 'hidden';
       }
      }
     }
@@ -54,7 +55,7 @@
         document.getElementById('inseticidaPreco')],
    price: 50,
 
-   Buy(){
+   Buy: ()=>{
     if(money.quantidade >= this.price){
      money.Take(this.price);
      this.quantidade++;
@@ -65,18 +66,18 @@
     }
    },
 
-  Add(q){
+  Add: (q)=>{
    this.quantidade += q;
    this.Set();
-  }
+  },
 
-  Take(q){
+  Take: (q)=>{
    console.log(q);
    this.quantidade -= q;
    this.Set();
-  }
+  },
 
-   Set(){
+   Set: ()=>{
     this.dom[0].innerHTML = this.quantidade;
     this.dom[1].innerHTML = this.price;
    }
