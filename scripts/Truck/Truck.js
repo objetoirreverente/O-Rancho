@@ -38,6 +38,7 @@ function enviaTruck(){
     tripImg.src = "Imagens/truck/tripGoing.PNG";
     tripImg.style.visibility = 'visible';
 
+    console.log('parseInt(carga[0]) ' + parseInt(carga[0]))
     arvore.Take(parseInt(carga[0]));
     bananeira.Take(parseInt(carga[1]));
     acaizeiro.Take(parseInt(carga[2]));

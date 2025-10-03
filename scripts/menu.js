@@ -153,6 +153,7 @@ function moveElement(element, marginLeft, marginTop){
 }
 
 function openUpg(div){
+ recursos.money.checkValues();
  document.getElementById(div).style.visibility = 'visible';
  document.getElementById('clickArea').style.cursor = 'default';
 }

@@ -46,7 +46,7 @@ function upgrade(atributo){
    if(caminhao[atributo].atual == caminhao[atributo].max) maizinho.style.display = 'none';
   }
  
-  recursos.Take(recursos.money, 100);
+  recursos.money.Take(100);
  }
 }
 

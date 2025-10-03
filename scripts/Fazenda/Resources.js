@@ -36,7 +36,11 @@ class Resources{
       values[i].style.color = 'black';
 
       const upgId = values[i].id.slice(0,values[i].id.length -2);
-      
+
+      console.log("caminhao.canUpg(upgId) " + caminhao.canUpg(upgId));
+      console.log("!cabaMorreuB " + !cabaMorreuB); 
+      console.log("ehOficina " + ehOficina);
+      console.log("ehOficina && !cabaMorreuB && caminhao.canUpg(upgId) " + ehOficina && !cabaMorreuB && caminhao.canUpg(upgId));
       if(ehOficina && !cabaMorreuB && caminhao.canUpg(upgId)){
        const index = parseInt(values[i].id.charAt(values[i].id.length - 1));
        maizinho[index].style.display = 'block';

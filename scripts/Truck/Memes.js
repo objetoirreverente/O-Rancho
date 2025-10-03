@@ -99,7 +99,7 @@ function snapToClosestImage() {
     const orientacao = (endY > startY) ? "baixo" : "cima";
     clearInterval(i);
     if(count >= 6 && count <= 12 && closestSlide == -4){
-     window.open("https://springgreen-cattle-575382.hostingersite.com/", '_blank').focus();
+     window.open('www.lojaumbra.com.br', '_blank').focus();
     }
     count = 0;
 }
