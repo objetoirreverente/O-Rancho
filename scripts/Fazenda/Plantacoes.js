@@ -98,9 +98,7 @@ class Plantacoes{
   };
 
   this.bananeira = {
-   Resistencia: 0,
-   Desenvolvimento: 0,
-   Longevidade: 0,
+
    h4: 'Bananeira',
    img: 'mudaBanana', 
    frutoQ: 6,
@@ -112,6 +110,24 @@ class Plantacoes{
    canAge: false,
    colheitasMax: 10,
    locais: [['-115px', '-10px'], ['-115px', '-10px'], ['-160px', '-100px'], ['-170px', '-95px'], ['-160px', '-90px']],
+
+   Resistencia: {
+    lastUp: 0, 
+    points: 0,
+    DOM: []
+   },
+
+   Desenvolvimento: {
+    lastUp: 0, 
+    points: 0,
+    DOM: []
+   },
+
+   Longevidade: {
+    lastUp: 0, 
+    points: 0,
+    DOM: []
+    },
 
    temposEstacoes: {
     outono: {
@@ -134,9 +150,8 @@ class Plantacoes{
   };
 
   this.acaizeiro = {
-   Resistencia: 0,
-   Desenvolvimento: 0,
-   Longevidade: 0,
+
+
    h4: 'Açaizeiro',
    img: 'sementeAcai', 
    frutoQ: 8,   //4 quilos por cacho
@@ -148,6 +163,25 @@ class Plantacoes{
    canAge: false,
    colheitasMax: 4,
    locais: [['-108px', '37px'], ['-108px', '37px'], ['-108px', '-10px'], ['-108px', '-60px'], ['-108px', '-92px']],
+
+
+   Resistencia: {
+    lastUp: 0, 
+    points: 0,
+    DOM: []
+   },
+
+   Desenvolvimento: {
+    lastUp: 0, 
+    points: 0,
+    DOM: []
+   },
+
+   Longevidade: {
+    lastUp: 0, 
+    points: 0,
+    DOM: []
+    },
 
    temposEstacoes: {
     outono: {
@@ -205,7 +239,7 @@ class Plantacoes{
     document.getElementsByClassName('arvoreHolder')[index-1].style.visibility = 'visible';  
     document.getElementById('treeSign' + index).style.visibility = 'hidden';
 
-    recursos.Take(recursos.money, 100);
+    recursos.money.Take(100);
    } 
    else {
     modal('Insuficient funds');

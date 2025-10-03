@@ -1,5 +1,7 @@
 
 
+
+
 class Resources{
  constructor(){
    this.sementesQuantidade = 0;
@@ -115,9 +117,10 @@ class Sementes extends Resources{
    }
 
     Buy(){
-     if(this.money.quantidade >= this.price){
-      this.money.Take(this.price);
+     if(recursos.money.quantidade >= this.price){
+      recursos.money.Take(this.price);
       this.Add(1);
+      console.log(this);
       document.getElementsByClassName('choice0' + this.index)[0].innerHTML = this.quantidade + 'x';
       if(tut == 1){
        moveElement('tutSeta', '75px', '240px');
@@ -148,6 +151,8 @@ const acaiVender = new Frutos('acaiVender');
 const acaizeiro = new Frutos('acaizeiro');
 const frutoRedencao = new Frutos('frutoRedencao');
 const macasVender = new Frutos('macasVender');
+macasVender.Add(10);
+
 const bananaVender = new Frutos('bananaVender');
 
 const sementeMaca = new Sementes('Maca', 10);

@@ -15,6 +15,7 @@ function Semear(especie, index){
   switch(currentStation){
    case "OUTONO":
    // _currentMinutos = especie.temposEstacoes.outono.minutos;
+     console.log("especie.temposEstacoes.outono.segundos " + especie.temposEstacoes.outono.segundos);
     _currentSegundos = especie.temposEstacoes.outono.segundos;
     currentSegundos = especie.temposEstacoes.outono.segundoE;
     break;
@@ -50,6 +51,7 @@ function Semear(especie, index){
 
   //const modDesenvolvimento = (Math.round((obj.especie.Desenvolvimento.lastUp/10) * 26));
   const modDesenvolvimento = (Math.round((especie.Desenvolvimento.lastUp/10) * 26));
+  console.log("modDesenvolvimento " + modDesenvolvimento);
   const tempoEspecie = _currentSegundos - modDesenvolvimento;
   const tempoEstagio = (especie.qestagios - especie.grownStage) * (currentSegundos - modDesenvolvimento);
 
@@ -74,13 +76,14 @@ function Semear(especie, index){
     obj.plantado = true;
     if(tut > 4){
      obj.temp.minutos = _currentMinutos; 
+     console.log("tempoEspecie " + tempoEspecie + " tempoEstagio " + tempoEstagio);
      obj.temp.segundos = tempoEspecie + tempoEstagio; // Duração após amadurecimento
 
     }  
    }
    especie.seed.Set();
    manipulacoes('esconder',"plantar" + obj.index);
-
+   console.log(especie.name + ' ' + obj.temp.segundos);
    obj.temp.on(obj.temp.segundos,
 
    //A CADA SEGUNDO EXECUTA
