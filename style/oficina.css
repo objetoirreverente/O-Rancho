@@ -1,0 +1,217 @@
+.xizinho:hover{
+ cursor: url(../Imagens/cursores/pointer.PNG), auto;
+}
+
+#Oficina{
+    position: absolute;
+    background-image: url(../Imagens/oficina/oficinaBack.PNG);
+    background-repeat: no-repeat;
+    padding-left: 6%;
+}
+
+#gunTable{
+    width: 50px;
+    height: 50px;
+    background: black;
+    margin-top: 32%;
+    margin-left: 22%;
+    position: absolute;
+}
+
+#gunHand{
+    width: 300px;
+    height: 300px;
+    margin-top: 30%;
+    margin-left: 44%;
+    position: relative;
+    display: none;
+}
+
+#gunTable:hover{
+ cursor: url('../Imagens/cursores/pointer.PNG'), auto;
+}
+
+#clickArea{
+    position: absolute;
+    cursor: pointer;
+    width: 12%;
+    height: 28%;
+    margin-left: 38%;
+    margin-top: 15%;
+    z-index: 1;
+}
+
+#clickArea:hover{
+ cursor: url(../Imagens/cursores/talk.PNG), auto;
+}
+
+.big-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 11;
+    width: 100%;
+}
+
+#overlayMorreu{
+    position: fixed;
+    display: none;
+    width: 49%;
+    height: 54%;
+    top: 23%;
+    left: 19%;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../Imagens/cursores/cavera.PNG);
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+.grupoUp{
+ display:flex;
+}
+
+.grupoUp p{
+ margin: 0;
+}
+
+.cOficina{
+    width: 65%;
+}
+
+.pao{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.miolo{
+    display: flex;
+    height: 78%;
+    margin: 30px;
+    flex-direction: row;
+    align-items: center;
+    width: 85%;
+}
+
+#truckPreview{
+    width: 50%;
+    height: 50%;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.itemEsquerdoSeparador{
+    border-right: 1px solid black;
+    text-align: center;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#integridade{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0;
+    text-align: center;
+    margin-top: 2%;
+    width: 100%;
+}
+
+#btnReparo{
+ margin-top: 5%;
+ border: 1px solid black;
+ border-radius: 10px;
+ width: 75%;
+ background-color: #b7873f;
+ display:none;
+}
+
+#btnReparo:hover{
+ cursor: url(../Imagens/cursores/pointer.PNG), auto;
+ background-color: #d39d4b;
+}
+
+.windowHeader{
+    display: flex;
+    width: 100%;
+    height: 45px;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+    align-items: flex-start;
+
+}
+
+.windowHeader h4{
+ margin-left: 10px;
+}
+
+.windowHeader img{
+    width: 20px;
+    margin: 10px;
+    position: sticky;
+    z-index: 3;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 90%;
+    gap: 30px;
+}
+
+.upgrade{
+    display: flex;
+    flex-direction: column;
+    margin-left: 23%;
+    justify-content: center;
+}
+
+.upgradetxt{
+    margin: 0;
+    margin-bottom: 7px;
+
+}
+
+#capacidadeP{
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+.upGraph{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.upUnit{
+    width: 6px;
+    height: 25px;
+    border: 2px solid black;
+    margin: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 10px;
+}
+
+#condicaoAtualCa{
+    margin: 0;
+    margin-top: 3px;
+}
+
+.maizinho:hover{
+ cursor: url("../Imagens/cursores/pointer.PNG"), auto;
+}

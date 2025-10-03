@@ -1,0 +1,160 @@
+.areaTiro{
+    position: absolute;
+    opacity: 0.5;
+    z-index: 10;
+}
+
+#areaCabeca1{
+    width: 21px;
+    height: 22px;
+    margin-left: 41%;
+    margin-top: 16%;
+    background-color: black;
+}
+
+#areaCabeca2{
+    width: 21px;
+    height: 22px;
+    margin-left: 44%;
+    margin-top: 16%;
+    background-color: brown;
+}
+
+#areaCabeca3{
+    width: 54px;
+    height: 21px;
+    margin-left: 41%;
+    margin-top: 14%;
+    background-color: red;
+}
+
+#areaCabeca4{
+    width: 8px;
+    height: 21px;
+    margin-left: 43%;
+    margin-top: 16%;
+    background-color: yellow;
+}
+
+#areaCabeca5{
+    width: 23px;
+    height: 30px;
+    background-color: aliceblue;
+    margin-left: 40%;
+    margin-top: 18%;
+}
+
+#areaCabeca6{
+    width: 23px;
+    height: 32px;
+    background-color: #b400ff;
+    margin-left: 45%;
+    margin-top: 18%;
+}
+
+#areaCabeca7{
+    width: 31px;
+    height: 36px;
+    background-color: #1bff00;
+    margin-left: 42%;
+    margin-top: 18%;
+}
+
+#areaTronco1{
+    width: 31px;
+    height: 36px;
+    background-color: #ffa500;
+    margin-left: 43%;
+    margin-top: 23%;
+}
+
+#areaTronco2{
+    width: 22px;
+    height: 36px;
+    background-color: #563e11;
+    margin-left: 41%;
+    margin-top: 23%;
+}
+
+#areaTronco3{
+    width: 53px;
+    height: 21px;
+    background-color: #780707;
+    margin-left: 41%;
+    margin-top: 21%;
+}
+
+#areaTronco4{
+    width: 30px;
+    height: 49px;
+    background-color: #3f00ff;
+    margin-left: 39%;
+    margin-top: 26%;
+}
+
+#areaTronco5{
+    width: 30px;
+    height: 49px;
+    background-color: #ffaaf8;
+    margin-left: 45%;
+    margin-top: 26%;
+}
+
+#areaTronco6{
+    width: 30px;
+    height: 49px;
+    background-color: #92d2d5;
+    margin-left: 45%;
+    margin-top: 26%;
+}
+
+#areaBracoD1{
+    width: 43px;
+    height: 49px;
+    background-color: #ff00f7;
+    margin-left: 37%;
+    margin-top: 22%;
+}
+
+#areaBracoD2{
+    width: 43px;
+    height: 44px;
+    background-color: #8b7b10;
+    margin-left: 35%;
+    margin-top: 27%;
+}
+
+#areaBracoD3{
+    width: 43px;
+    height: 44px;
+    background-color: #107a8b;
+    margin-left: 33%;
+    margin-top: 31%;
+}
+
+#areaBracoE1{
+    width: 35px;
+    height: 49px;
+    background-color: #ffa500;
+    margin-left: 46%;
+    margin-top: 22%;
+}
+
+#areaBracoE2{
+    width: 31px;
+    height: 44px;
+    background-color: #c1500f;
+    margin-left: 48%;
+    margin-top: 27%;
+}
+
+#areaBracoE3{
+    width: 43px;
+    height: 44px;
+    background-color: #e7bfd9;
+    margin-left: 50%;
+    margin-top: 31%;
+}
+
+
+

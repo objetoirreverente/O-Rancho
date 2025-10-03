@@ -1,0 +1,219 @@
+#Deposito{
+    background-image: url(../Imagens/deposito/deposito.PNG);
+    background-repeat: no-repeat;
+    display: none;
+    position: absolute;
+}
+
+
+#deposito_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-none{
+ border: none;
+}
+
+#deposito_table{
+    border: 3px solid black;
+    background-color: #d39d4b;
+    border-spacing: 10px;
+    border-radius: 5%;
+}
+
+.paoDeposito{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.btnUpgPlant{
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    background-color: #d39d4b;
+    background-size: 75%;
+}
+
+.btnUpgPlant:hover{
+ background-color: #e1ac5c;
+ cursor: url('../Imagens/cursores/pointer.png'), auto;
+}
+
+.grid-container-deposito{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}
+
+.cUpgMaca{
+ width: 100%;
+ height: 100%;
+}
+
+.cDeposito{
+ width: 50%;
+}
+
+#hD{
+    position: absolute;
+    top: 42%;
+    left: 44%;
+}
+
+#hR{
+    position: absolute;
+    top: 42%;
+    left: 54.3%;
+}
+
+#hL{
+    position: absolute;
+    top: 59%;
+}
+
+.upCircleUnit{
+    border: 2px solid black;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: #8b652c;
+}
+
+.upCircleUnitLvl{
+    border: 2px solid black;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: #8b652c;
+}
+
+.upCircleUnitHover:hover{
+ background-color: #e1ac5c;
+ opacity: 0.7;
+ cursor: url('../Imagens/cursores/pointer.png'), auto;
+}
+
+#lvlpoints{
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.r1{
+    top: 40.7%;
+    left: 56.6%;
+}
+
+.r2{
+    top: 36%;
+    left: 59.6%;
+}
+
+
+.r3{
+    top: 31.6%;
+    left: 62.5%;
+}
+
+.r4{
+    top: 27.6%;
+    left: 65.5%;
+}
+
+.r5{
+    top: 23.7%;
+    left: 68.4%;
+}
+
+.d1{
+    top: 40.7%;
+    left: 41.7%;
+}
+
+.d2{
+    top: 35.9%;
+    left: 38.9%;
+}
+
+.d3{
+    top: 31.5%;
+    left: 35.9%;
+}
+
+.d4{
+    top: 27.6%;
+    left: 33.1%;
+}
+
+.d5{
+    top: 23.7%;
+    left: 30.2%;
+}
+
+.l1{
+    top: 67.5%;
+    left: 49.1%;
+}
+
+.l2{
+    top: 73.5%;
+    left: 49.1%;
+}
+
+.l3{
+    top: 79.9%;
+    left: 49.1%;
+}
+
+.l4{
+    top: 85.9%;
+    left: 49.1%;
+}
+
+.l5{
+    top: 91.9%;
+    left: 49.1%;
+}
+
+#points{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#upgMacaw{
+ position: absolute;
+ z-index: 21;
+}
+
+#maca{
+    background-image: url(../Imagens/vendinha/apple.PNG);
+}
+
+#banana{
+    background-image: url(../Imagens/vendinha/banana.PNG);
+}
+
+#acai{
+    background-image: url(../Imagens/vendinha/acaiFruto.PNG);
+}
+
+
+.middle{
+    width: 80px;
+    height: 80px;
+    border: 4px solid black;
+    background-image: url(../Imagens/vendinha/apple.PNG);
+    background-size: 75%;
+    margin-bottom: 26px;
+}

@@ -1,0 +1,44 @@
+#Memes{
+    background-image: url(../Imagens/truck/memes/data/memesBackground.PNG);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+#celular{
+ position: absolute;
+}
+
+#mao{
+ position:absolute;
+}
+
+#dedao{
+    position: absolute;
+    left: 1vw;
+    top: 1vw;
+}
+
+.slider-container {
+    width: 93px;
+    height: 183px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    position: absolute;
+    top: 18vw;
+    left: 33vw;
+}
+
+.slider {
+    position: absolute; /* ou relative se preferir */
+    transition: transform 0.3s ease-out;  /* Animação suave */
+    cursor: grab;
+}
+
+.slider img {
+    width: 93px;
+    height: 183px;
+    display: block;  /* Evita espaços extras */
+    user-select: none; /* Evita a seleção de texto ao arrastar */
+    pointer-events: none;  /* Garante que o evento está no container, não na imagem */
+}

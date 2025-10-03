@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+ <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+ <head>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/farmstyle.css">
+    <link rel="stylesheet" href="style/treeStyle.css">
+    <link rel="stylesheet" href="style/shopstyle.css">
+    <link rel="stylesheet" href="style/storeStyle.css">
+    <link rel="stylesheet" href="style/cursores.css">
+    <link rel="stylesheet" href="style/truckStyle.css">
+    <link rel="stylesheet" href="style/deposito.css">
+    <link rel="stylesheet" href="style/oficina.css">
+    <link rel="stylesheet" href="style/areaTiros.css">
+    <link rel="stylesheet" href="style/memes.css">
+
+ </head>
+
+ <body>
+
+ <div id='Inicial' class='inicial'>
+  <div id='initbg'>
+   <div class='initbtn' onClick='fade("out","Farm", "Inicial");'>
+    <img src='Imagens/woodenSign2.png' class='initbtnimg'>
+    <p class='btntext'>START</p>
+   </div>
+
+  </div>
+ </div>
+
+
+<!-- --------------------------------- FARM --------------------------------- -->
+ 
+  <div id="Farm" style="display: none">
+
+   <div id="arvoreContainer">
+    <img id='iaipai' src='Imagens/fazenda/iaipai.GIF'>
+    <p id='entraDeposito' onClick='mudaCena("Deposito")'>ENTRAR</p>
+
+    <table id='spots'>
+     <tr>
+
+     <!-- Cada spotcontainer corresponde aos elementos de um local de cultivo como a planta, barra de progresso, display do timer, placa de venda... -->
+     <td class='spotcontainer'>
+
+      <div id = 'plantar0' class='plantdesign' onClick='plantacao.showOptions(0)'>
+       <img class='plantbg' src='Imagens/fazenda/arvore/plantbg.png'>
+       <p class='plantxt'>PLANT</p>     
+      </div>
+
+      <div id='choiceContainer0' class='choiceContainer'>
+       <!--<div class='choice01' onClick='plantacao.Criar(plantacao.macieira,0)'></div>-->
+       <div class='choice01' onClick='Criar(plantacao.macieira,0)'></div>
+       <div class='choice02' onClick='Criar(plantacao.bananeira,0)'></div>
+       <div class='choice03' onClick='Criar(plantacao.acaizeiro,0)'></div>
+      </div>
+       
+      <div class='Tokens'>
+       <img id='tinseticida0' src='Imagens/fazenda/shop/sementePera.PNG' style='display:none'>
+      </div>
+      <div id='treeHover0'>
+       <img id='plantarSpot0' class='p' src='Imagens/fazenda/arvore/plantarApenas.PNG'><br>
+       <img id='pragaLarva0' class='pragaLarva' src='Imagens/fazenda/larva/larva0.PNG'>
+      </div>
+
+      <div class='axe' id='axe0' onClick='plantacao.Chop(0)'></div>
+
+      <div class='duracao' style='display:none'>
+       <img class='mbar'src='Imagens/fazenda/emptyBart.PNG'>
+       <img id='mbar0' class='mbar' src='Imagens/fazenda/fullBart.PNG' style='height:60px'>    
+       <p id='btext0' class='btext'>10</p>     
+      </div>
+
+      <div class='duracaow' style='display:none'>
+       <img class='mbar'src='Imagens/fazenda/emptyBartw.PNG'>
+       <img id='mbarw0' class='mbar' src='Imagens/fazenda/fullBarw.PNG' style='height:60px'>        
+      </div>
+
+ 
+      <div id='display0' class='display' >
+       <p id='di0'></p>
+      </div>
+     </td>
+
+     <td class='spotcontainer'>
+
+      <div class='treeSign' id='treeSign1' onClick='plantacao.BuySpace(1)'>
+       <img class='treesignimg' src='Imagens/fazenda/arvore/treesignedit.PNG'>
+       <p class='value' id='treesignv1'>$100</p>
+      </div>
+
+      <div class='arvoreHolder' style='visibility: hidden'>
+       <div id = 'plantar1' class='plantdesign' onClick='plantacao.showOptions(1)' >
+        <img class='plantbg' src='Imagens/fazenda/arvore/plantbg.png'>
+        <p class='plantxt'>PLANT</p>
+       </div>
+
+       <div id='choiceContainer1' class='choiceContainer'>
+        <div class='choice01' onClick='Criar(plantacao.macieira,1)'></div>
+        <div class='choice02' onClick='Criar(plantacao.bananeira,1)'></div>
+        <div class='choice03' onClick='Criar(plantacao.acaizeiro,1)'></div>
+       </div>
+
+       <div class='Tokens'>
+        <img id='tinseticida1' src='Imagens/fazenda/shop/sementePera.PNG' style='display:none'>
+       </div>
+
+       <div id='treeHover1'>
+        <img id='plantarSpot1' class='p' src='Imagens/fazenda/arvore/plantarApenas.PNG'><br>
+        <img id='pragaLarva1' class='pragaLarva' src='Imagens/fazenda/larva/larva0.PNG'>
+       </div>
+
+       <div class='axe' id='axe1' onClick='plantacao.Chop(1)'></div>
+
+       <div class='duracao' style='display:none'>
+        <img class='mbar' src='Imagens/fazenda/emptyBart.PNG'>
+        <img id='mbar1' class='mbar' src='Imagens/fazenda/fullBart.PNG' style='height:60px'>    
+        <p id='btext1' class='btext'>10</p>     
+       </div>
+
+       <div class='duracaow' style='display:none'>
+        <img class='mbar'src='Imagens/fazenda/emptyBartw.PNG'>
+        <img id='mbarw1' class='mbar' src='Imagens/fazenda/fullBarw.PNG' style='height:60px'>        
+       </div>
+ 
+       <div id='display1' class='display' style = 'display: none'>
+        <p id='di1'></p>
+       </div>
+
+      </div>
+     </td>
+
+     <td class='spotcontainer'>
+     
+      <div class='treeSign' id='treeSign2' onClick='plantacao.BuySpace(2)'>
+       <img class='treesignimg' src='Imagens/fazenda/arvore/treesignedit.PNG'>
+       <p class='value' id='treesignv2'>$100</p>
+      </div>
+  
+      <div class='arvoreHolder' style='visibility: hidden'>
+       <div id = 'plantar2' class='plantdesign' onClick='plantacao.showOptions(2)'>
+        <img class='plantbg' src='Imagens/fazenda/arvore/plantbg.PNG'>
+        <p class='plantxt'>PLANT</p>
+       </div>
+
+       <div id='choiceContainer2' class='choiceContainer'>
+        <div class='choice01' onClick='Criar(plantacao.macieira,2)'></div>
+        <div class='choice02' onClick='Criar(plantacao.bananeira,2)'></div>
+        <div class='choice03' onClick='Criar(plantacao.acaizeiro,2)'></div>
+       </div>
+
+      <div class='Tokens'>
+       <img id='tinseticida2' src='Imagens/fazenda/shop/sementePera.PNG' style='display:none'>
+      </div>
+
+       <div id='treeHover2'>
+        <img id='plantarSpot2' class='p' src='Imagens/fazenda/arvore/plantarApenas.PNG'><br>
+        <img id='pragaLarva2' class='pragaLarva' src='Imagens/fazenda/larva/larva0.PNG'>
+       </div>
+
+       <div class='axe' id='axe2' onClick='plantacao.Chop(2)'></div>
+
+       <div class='duracao' style='display:none'>
+        <img class='mbar' src='Imagens/fazenda/emptyBart.PNG'>
+        <img id='mbar2' class='mbar' src='Imagens/fazenda/fullBart.PNG' style='height:60px'>    
+        <p id='btext2' class='btext'>10</p>     
+       </div>
+ 
+       <div class='duracaow' style='display:none'>
+        <img class='mbar'src='Imagens/fazenda/emptyBartw.PNG'>
+        <img id='mbarw2' class='mbar' src='Imagens/fazenda/fullBarw.PNG' style='height:60px'>        
+       </div>
+
+       <div id='display2' class='display' style = 'display: none'>
+        <p id='di2'></p>
+       </div>
+      </div>
+     </td>
+
+     <td class='spotcontainer'>
+     
+      <div class='treeSign' id='treeSign3' onClick='plantacao.BuySpace(3)'>
+       <img class='treesignimg' src='Imagens/fazenda/arvore/treesignedit.PNG'>
+       <p class='value' id='treesignv3'>$100</p>
+      </div>
+  
+      <div class='arvoreHolder' style='visibility: hidden'>
+       <div id = 'plantar3' class='plantdesign' onClick='plantacao.showOptions(3)'>
+        <img class='plantbg' src='Imagens/fazenda/arvore/plantbg.PNG'>
+        <p class='plantxt'>PLANT</p>
+       </div>
+
+       <div id='choiceContainer3' class='choiceContainer'>
+        <div class='choice01' onClick='Criar(plantacao.macieira,3)'></div>
+        <div class='choice02' onClick='Criar(plantacao.bananeira,3)'></div>
+        <div class='choice03' onClick='Criar(plantacao.acaizeiro,3)'></div>
+       </div>
+
+      <div class='Tokens'>
+       <img id='tinseticida3' src='Imagens/fazenda/shop/sementePera.PNG' style='display:none'>
+      </div>
+
+       <div id='treeHover3'>
+        <img id='plantarSpot3' class='p' src='Imagens/fazenda/arvore/plantarApenas.PNG'><br>
+        <img id='pragaLarva3' class='pragaLarva' src='Imagens/fazenda/larva/larva0.PNG'>
+       </div>
+
+       <div class='axe' id='axe3' onClick='plantacao.Chop(3)'></div>
+
+       <div class='duracao' style='display:none'>
+        <img class='mbar' src='Imagens/fazenda/emptyBart.PNG'>
+        <img id='mbar3' class='mbar' src='Imagens/fazenda/fullBart.PNG' style='height:60px'>    
+        <p id='btext3' class='btext'>10</p>     
+       </div>
+
+
+       <div class='duracaow' style='display:none'>
+        <img class='mbar'src='Imagens/fazenda/emptyBartw.PNG'>
+        <img id='mbarw3' class='mbar' src='Imagens/fazenda/fullBarw.PNG' style='height:60px'>        
+       </div>
+ 
+       <div id='display3' class='display' style = 'display: none'>
+        <p id='di3'></p>
+       </div>
+      </div>
+     </td>
+
+     <td class='spotcontainer'>
+     
+      <div class='treeSign' id='treeSign4' onClick='plantacao.BuySpace(4)'>
+       <img class='treesignimg' src='Imagens/fazenda/arvore/treesignedit.PNG'>
+       <p class='value' id='treesignv4'>$100</p>
+      </div>
+  
+      <div class='arvoreHolder' style='visibility: hidden'>
+       <div id = 'plantar4' class='plantdesign' onClick='plantacao.showOptions(4)'>
+        <img class='plantbg' src='Imagens/fazenda/arvore/plantbg.PNG'>
+        <p class='plantxt'>PLANT</p>
+       </div>
+      
+       
+       <div id='choiceContainer4' class='choiceContainer'>
+        <div class='choice01' onClick='Criar(plantacao.macieira,4)'></div>
+        <div class='choice02' onClick='Criar(plantacao.bananeira,4)'></div>
+        <div class='choice03' onClick='Criar(plantacao.acaizeiro,4)'></div>
+       </div>
+
+      <div class='Tokens'>
+       <img id='tinseticida4' src='fazenda/shop/sementePera.PNG' style='display:none'>
+      </div>
+
+       <div id='treeHover4'>
+        <img id='plantarSpot4' class='p' src='Imagens/fazenda/arvore/plantarApenas.PNG'><br>
+        <img id='pragaLarva4' class='pragaLarva' src='Imagens/fazenda/larva/larva0.PNG'>
+       </div>
+
+       <div class='axe' id='axe4' onClick='plantacao.Chop(4)'></div>
+
+       <div class='duracao' style='display:none'>
+        <img class='mbar' src='Imagens/fazenda/emptyBart.PNG'>
+        <img id='mbar4' class='mbar' src='Imagens/fazenda/fullBart.PNG' style='height:60px'>    
+        <p id='btext4' class='btext'>10</p>     
+       </div>
+
+       <div class='duracaow' style='display:none'>
+        <img class='mbar'src='Imagens/fazenda/emptyBartw.PNG'>
+        <img id='mbarw4' class='mbar' src='Imagens/fazenda/fullBarw.PNG' style='height:60px'>        
+       </div>
+ 
+       <div id='display4' class='display' style = 'display: none'>
+        <p id='di4'></p>
+       </div>
+      </div>
+     </td>
+
+     </tr>
+    </table>
+
+   </div>
+
+   <div id='menuFarmBack'>
+        
+    <div id='shopContainer'>
+
+     <div id='swindowholder' class='swindowholder' style='display: none'>
+      <div class='windowHeader'>
+       <h4 id='seedsHeader' onClick='showSeeds()'>SHOP</h4>
+       <img class='xizinho' onClick='clsSW()' src='Imagens/xizinho.PNG'>
+      </div>
+      <div id="Sementes">
+       <table width="100%" height="100%" >
+        <tr>
+         <td class="shopItens" id='tdSemente' onClick='sementeMaca.Buy()'></td>
+         <td class="shopItens" id='tdSementeBanana' onClick='sementeBanana.Buy()'></td>
+         <td class="shopItens" id='tdSementeAcai' onClick='sementeAcai.Buy()'></td>
+         <td class='shopItens' id='fertHolder' onClick='recursos.inseticida.Buy()'></td>
+
+        </tr>
+        <tr>
+         <td id="priceMaca" style='text-align:center'>10</td>
+         <td id="priceBanana" style='text-align:center'>15</td>
+         <td id="priceAcai" style='text-align:center'>40</td>
+         <td id="inseticidaPreco" style='text-align:center'>10</td>
+
+         <td></td>
+         <td></td>
+        </tr>
+       </table>
+      </div>
+     </div>
+
+     <div id='fscontainer' onClick='opnSW()'>
+      <p id='fstext'>SHOP</p>
+      <img id='farmShop' src='Imagens/fazenda/shop/farmShop.PNG'>
+     </div>
+    </div>
+
+   </div>
+  </div>
+
+<!-- --------------------------------- FARM --------------------------------- -->
+
+<!-- --------------------------------- DEPOSITO --------------------------------- -->
+ <div class='background' id='Deposito'>
+  <div id='upgMacaw' class='big-container hidden'>
+   <div class='container cUpgMaca' id='upgradeCaWin'>
+    <div class='windowHeader'>
+     <h4>UPGRADES MAÇÃ</h4>
+     <img class='xizinho' onClick='closeUpg("upgMacaw")' src='Imagens/xizinho.PNG'>
+    </div>
+    <div class='paoDeposito'>
+        <h2 id='hD'>D</h2>
+        <h2 id='hR'>R</h2>
+        <h2 id='hL'>L</h2>
+        <div class='middleHolder'>
+         <h4 id='lvlpoints'></h4>
+	 <div id='middle' class='Circle middle'></div>
+        </div>
+	<div class='Circle upCircleUnit r1'></div>
+	<div class='Circle upCircleUnit r2'></div>
+	<div class='Circle upCircleUnit r3'></div>
+	<div class='Circle upCircleUnit r4'></div>
+	<div class='Circle upCircleUnit r5'></div>
+	<div class='Circle upCircleUnit d1'></div>
+	<div class='Circle upCircleUnit d2'></div>
+	<div class='Circle upCircleUnit d3'></div>
+	<div class='Circle upCircleUnit d4'></div>
+	<div class='Circle upCircleUnit d5'></div>
+	<div class='Circle upCircleUnit l1'></div>
+	<div class='Circle upCircleUnit l2'></div>
+	<div class='Circle upCircleUnit l3'></div>
+	<div class='Circle upCircleUnit l4'></div>
+	<div class='Circle upCircleUnit l5'></div>
+    </div>
+   </div>
+
+  </div>
+
+  <div class='big-container visible positionRelative'>
+   <div class='container cDeposito' id='upgradeCaWin'>
+    <div class='windowHeader'>
+     <h4>DEPÓSITO</h4>
+     <img class='xizinho' onClick='closeUpg("big-container")' src='Imagens/xizinho.PNG'>
+    </div>
+    <div class='paoDeposito'>
+     <div class='miolo'>
+      <div class='grid-container-deposito'>
+        <div id='opnMacaw'></div>
+	
+	<h4 style='text-align: center'>
+         <p style='margin: 0' id='lvlarvore'>0</p> <!-- os caracteres após 'lvl' devem ser identicos a propriedade 'name' -->
+	 <div id='maca' onclick='plantacao.opnMacaUpg()' class='Circle btnUpgPlant'></div>
+        </h4>
+
+	<h4 style='text-align: center'>
+         <p style='margin: 0' id='lvlbananeira'>0</p>
+	 <div id='banana' onclick='plantacao.opnBananaUpg()' class='Circle btnUpgPlant'></div>
+        </h4>
+
+	<h4 style='text-align: center'>
+         <p style='margin: 0' id='lvlacaizeiro'>0</p>
+	 <div id='acai' onclick='plantacao.opnAcaiUpg()' class='Circle btnUpgPlant'></div>
+        </h4>
+
+      </div>
+     </div>
+    </div>
+   </div>
+
+  </div>
+ </div>
+<!-- --------------------------------- DEPOSITO --------------------------------- -->
+
+<!-- --------------------------------- STORE --------------------------------- -->
+
+  <div id="Store" style='display: none'>
+   <div class='background' id='vendinha'>
+  </div>
+
+   <div id='menuStoreBack'>
+     <table style='margin-top: 20px'>
+      <tr>
+
+       <td class="cesta" >
+        <img src='Imagens/vendinha/cestaVazia.PNG' id="cesta0">
+        <img src='Imagens/vendinha/apple.PNG' id='frutaV0' class='frutaV'>
+
+        <div id='setasHolder0' class='setasHolder'>
+         <span style='padding-right: 99px'><img onClick='esquerda(0)' class='setinhas' id='se0' src='Imagens/vendinha/setinhaEsquerda.PNG'></span><span><img onClick='direita(0)' class='setinhas' id='sd0' src='Imagens/vendinha/setinhaDireita.PNG'></span>     
+        </div>        
+
+        <br>
+        <table class='sellInfo' style='width: 150px'>
+         <tr>
+          <td class='sellInfoTD' style='text-align: left' >Amount</td>
+          <td class='sellInfoTD' style='text-align: right'>
+           <input class='inputStore' type='text' id='amount0' size='6'>
+           <div id='amountContainer0' style='display:none'></div>
+          </td> 
+         </tr>
+         
+         <tr>                
+          <td class='sellInfoTD' style='text-align: left' >Price</td>
+          <td class='sellInfoTD' style='text-align: right'>
+           <input class='inputStore' type='text' id='price0' size='6'>
+           <div id='priceContainer0'></div>
+          </td>
+         </tr>
+
+         <tr>
+          <th colspan='2' style='border: 2px solid #974b00'>
+           <div id='v0' class='vstyle' onClick='slot1.vende_macas()'>VENDER</div>
+           <div id='d0' style='display: none'>
+             <p id='dil0' style='margin: 0px'>00:00:00</p>
+           </div>
+          </th>
+         </tr>
+        </table>
+       </td>
+
+       <td class="cesta">
+        <div id='bslot1' onClick='slot2.compra_cesta()' class='bbasket'>
+         <div class='bbtxt'>
+          <p style='text-align: center'>BUY BASKET</p>
+          <p style='text-align: center' class='value'>$100</p>
+         </div>
+         <img src='Imagens/vendinha/woodenSign.png' class='bbimg'>
+        </div>
+
+        <div id='cestaHolder1' style='display: none'>
+        <img src='Imagens/vendinha/cestaVazia.png' id="cesta1">
+        <img src='Imagens/vendinha/apple.PNG' id='frutaV1' class='frutaV'>
+
+        <div id='setasHolder1' class='setasHolder'>
+         <span style='padding-right: 99px'><img onClick='esquerda(1)' class='setinhas' id='se1' src='Imagens/vendinha/setinhaEsquerda.PNG'></span><span><img onClick='direita(1)' class='setinhas' id='sd1' src='Imagens/vendinha/setinhaDireita.PNG'></span>     
+        </div>        
+
+        <br>
+        <table class='sellInfo' style='width: 150px'>
+         <tr>
+          <td class='sellInfoTD' style='text-align: left' >Amount</td>
+          <td class='sellInfoTD' style='text-align: right'>
+           <input class='inputStore' type='text' id='amount1' size='7'>
+           <div id='amountContainer1'></div>
+          </td> 
+         </tr>
+         
+         <tr>                
+          <td class='sellInfoTD' style='text-align: left' >Price</td>
+          <td class='sellInfoTD' style='text-align: right'>
+           <input class='inputStore' type='text' id='price1' size='7'>
+           <div id='priceContainer1'></div>
+          </td>
+         </tr>
+
+         <tr>
+          <th colspan='2' style='border: 2px solid #974b00'>
+           <div id='v1' class='vstyle' onClick='slot2.vende_macas()'>VENDER</div>
+           <div id='d1' style='display: none'><p id='dil1' style='margin: 0px'>00:00:00</p></div>
+          </th>
+         </tr>
+        </table>
+        </div>
+       </td>
+
+       <td class="cesta">
+        <div id='bslot2' onClick='slot3.compra_cesta()' class='bbasket'>
+         <div class='bbtxt'>
+          <p style='text-align: center'>BUY BASKET</p>
+          <p style='text-align: center' class='value'>$100</p>
+         </div>
+         <img src='Imagens/vendinha/woodenSign.png' class='bbimg'>
+        </div>
+
+        <div id='cestaHolder2' style='display: none'>
+        <img src='Imagens/vendinha/cestaVazia.png' id="cesta2">
+
+        <img src='Imagens/vendinha/apple.PNG' id='frutaV2' class='frutaV'>
+
+        <div id='setasHolder2' class='setasHolder'>
+         <span style='padding-right: 99px'><img onClick='esquerda(2)' class='setinhas' id='se2' src='Imagens/vendinha/setinhaEsquerda.PNG'></span><span><img onClick='direita(2)' class='setinhas' id='sd2' src='Imagens/vendinha/setinhaDireita.PNG'></span>     
+        </div>        
+
+        <br>
+        <table class='sellInfo' style='width: 150px'>
+         <tr>
+          <td class='sellInfoTD' style='text-align: left' >Amount</td>
+          <td class='sellInfoTD' style='text-align: right'>
+           <input class='inputStore' type='text' id='amount2' size='7'>
+           <div id='amountContainer2'></div>
+          </td> 
+         </tr>
+         
+         <tr>                
+          <td class='sellInfoTD' style='text-align: left' >Price</td>
+          <td class='sellInfoTD' style='text-align: right'>
+           <input class='inputStore' type='text' id='price2' size='7'>
+           <div id='priceContainer2'></div>
+          </td>
+         </tr>
+
+         <tr>
+          <th colspan='2' style='border: 2px solid #974b00'>
+           <div id='v2' class='vstyle' onClick='slot3.vende_macas()'>VENDER</div>
+           <div id='d2' style='display: none'><p id='dil2' style='margin: 0px'>00:00:00</p></div>
+          </th>
+         </tr>
+        </table>
+        </div>
+       </td> 
+
+       <td class="cesta">
+        <div id='bslot3' onClick='slot4.compra_cesta()' class='bbasket'>
+         <div class='bbtxt'>
+          <p style='text-align: center'>BUY BASKET</p>
+          <p style='text-align: center' class='value'>$100</p>
+         </div>
+         <img src='Imagens/vendinha/woodenSign.png' class='bbimg'>
+        </div>
+
+        <div id='cestaHolder3' style='display: none'>
+        <img src='Imagens/vendinha/cestaVazia.png' id="cesta3">
+
+        <img src='Imagens/vendinha/apple.PNG' id='frutaV3' class='frutaV'>
+
+        <div id='setasHolder3' class='setasHolder'>
+         <span style='padding-right: 99px'><img onClick='esquerda(3)' class='setinhas' id='se3' src='Imagens/vendinha/setinhaEsquerda.PNG'></span><span><img onClick='direita(3)' class='setinhas' id='sd3' src='Imagens/vendinha/setinhaDireita.PNG'></span>     
+        </div>        
+
+
+        <br>
+        <table class='sellInfo' style='width: 150px'>
+         <tr>
+          <td class='sellInfoTD' style='text-align: left' >Amount</td>
+          <td class='sellInfoTD' style='text-align: right'>
+           <input class='inputStore' type='text' id='amount3' size='7'>
+           <div id='amountContainer3'></div>
+          </td> 
+         </tr>
+         
+         <tr>                
+          <td class='sellInfoTD' style='text-align: left' >Price</td>
+          <td class='sellInfoTD' style='text-align: right'>
+           <input class='inputStore' type='text' id='price3' size='7'>
+           <div id='priceContainer3'></div>
+          </td>
+         </tr>
+
+         <tr>
+          <th colspan='2' style='border: 2px solid #974b00'>
+           <div id='v3' class='vstyle' onClick='slot4.vende_macas()'>VENDER</div>
+           <div id='d3' style='display: none'><p id='dil3' style='margin: 0px'>00:00:00</p></div>
+          </th>
+         </tr>
+        </table>
+        </div>
+       </td> 
+
+       <td class="cesta">
+        <div id='bslot4' onClick='slot5.compra_cesta()' class='bbasket'>
+         <div class='bbtxt'>
+          <p style='text-align: center'>BUY BASKET</p>
+          <p style='text-align: center' class='value'>$100</p>
+         </div>
+         <img src='Imagens/vendinha/woodenSign.png' class='bbimg'>
+        </div>
+
+        <div id='cestaHolder4' style='display: none'>
+        <img src='Imagens/vendinha/cestaVazia.png' id="cesta4">
+
+        <img src='Imagens/vendinha/apple.PNG' id='frutaV4' class='frutaV'>
+
+        <div id='setasHolder4' class='setasHolder'>
+         <span style='padding-right: 99px'><img onClick='esquerda(4)' class='setinhas' id='se4' src='Imagens/vendinha/setinhaEsquerda.PNG'></span><span><img onClick='direita(4)' class='setinhas' id='sd4' src='Imagens/vendinha/setinhaDireita.PNG'></span>     
+        </div>        
+
+
+        <br>
+        <table class='sellInfo' style='width: 150px'>
+         <tr>
+          <td class='sellInfoTD' style='text-align: left' >Amount</td>
+          <td class='sellInfoTD' style='text-align: right'>
+           <input class='inputStore' type='text' id='amount4' size='7'>
+           <div id='amountContainer4'></div>
+          </td> 
+         </tr>
+         
+         <tr>                
+          <td class='sellInfoTD' style='text-align: left' >Price</td>
+          <td class='sellInfoTD' style='text-align: right'>
+           <input class='inputStore' type='text' id='price4' size='7'>
+           <div id='priceContainer4'></div>
+          </td>
+         </tr>
+
+         <tr>
+          <th colspan='2' style='border: 2px solid #974b00'>
+           <div id='v4' class='vstyle' onClick='slot5.vende_macas()'>VENDER</div>
+           <div id='d4' style='display: none'><p id='dil4' style='margin: 0px'>00:00:00</p></div>
+          </th>
+         </tr>
+        </table>
+        </div>
+       </td>  
+      
+      </tr> 
+     </table>  
+   </div>
+   
+   <div id='truck_holder'>
+    <img id='truckButton' src="Imagens/vendinha/truckButton.PNG">
+    <p id='truckTimer'></p>
+   </div>
+  </div>
+
+<!-- --------------------------------- STORE --------------------------------- -->
+
+<!-- --------------------------------- TRUCK --------------------------------- -->
+  <div class='background' id='Truck' style='display: none'>
+   <div id='clickMeme' onClick='mudaCena("Memes")'></div>
+   <div id='truck_menu'>
+
+    <div class='tableTruck'>
+     <h4>TRANSPORTAR MERCADORIA</h4>
+     <div class='row'>
+      <div class='roll'>
+       <img class='fruitimg' src='Imagens/vendinha/apple.PNG'>
+       <input class='envia' id='envia_apple' type='text' size='7'>
+      </div>
+      <div class='roll'>
+       <img class='fruitimg' src='Imagens/vendinha/banana.PNG'>
+       <input class='envia' id='envia_banana' type='text' size='7'>
+      </div>
+      <div class='roll'>
+       <img class='fruitimg' src='Imagens/vendinha/acaiFruto.PNG'>
+       <input class='envia' id='envia_acai' type='text' size='7'>
+      </div>
+     </div>
+      <img id='trip' src='' style='visibility:hidden'>
+
+      <div id='btnEnviarTruck' onClick='enviaTruck()'>ENVIAR</div>
+      <p id='dit'>00:00:00</p>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class='background' id='Memes' style='display: none'>
+   <img draggable='false' id='celular' src='Imagens/truck/memes/data/celular.PNG'>
+
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <img class='dragImg' src="Imagens/fazenda/iaipai.GIF" alt="Image 1">
+            <img class='dragImg' src="Imagens/truck/memes/happySad.GIF" alt="Image 2">
+            <img class='dragImg' src="Imagens/truck/memes/hawk-tuah.GIF" alt="Image 3">
+            <img class='dragImg' src="Imagens/truck/memes/trollface-troll-face.GIF" alt="Image 4">
+            <img class='dragImg' src="Imagens/truck/memes/clothAnim.GIF" alt="Image 5">
+            <img class='dragImg' src="Imagens/truck/memes/herve-depression.GIF" alt="Image 6">
+            <img class='dragImg' src="Imagens/truck/memes/still-water-water.GIF" alt="Image 7">
+            <img class='dragImg' src="Imagens/truck/memes/tom-ching-cheng-hanji.GIF" alt="Image 8">
+            <!-- Adicione mais imagens aqui -->
+        </div>
+    </div>
+
+   <img draggable='false' id='mao' src='Imagens/truck/memes/data/mao.PNG'>
+   <img draggable='false' id='dedao' src='Imagens/truck/memes/data/dedaoBaixo.PNG'>
+  </div>
+
+<!-- --------------------------------- TRUCK --------------------------------- -->
+
+<!-- --------------------------------- OFICINA --------------------------------- -->
+ <div class='background' style='display: none' id='Oficina'>
+    <div class='areaTiro' id='areaCabeca1'></div>
+    <div class='areaTiro' id='areaCabeca2'></div>
+    <div class='areaTiro' id='areaCabeca3'></div>
+    <div class='areaTiro' id='areaCabeca4'></div>
+    <div class='areaTiro' id='areaCabeca5'></div>
+    <div class='areaTiro' id='areaCabeca6'></div>
+    <div class='areaTiro' id='areaCabeca7'></div>
+
+    <div class='areaTiro' id='areaTronco1'></div>
+    <div class='areaTiro' id='areaTronco2'></div>
+    <div class='areaTiro' id='areaTronco3'></div>
+    <div class='areaTiro' id='areaTronco4'></div>
+    <div class='areaTiro' onclick='console.log(this.id)' id='areaTronco5'></div>
+    <div class='areaTiro' id='areaTronco6'></div>
+
+    <div class='areaTiro' id='areaBracoD1'></div>
+    <div class='areaTiro' id='areaBracoD2'></div>
+    <div class='areaTiro' id='areaBracoD3'></div>
+
+    <div class='areaTiro' id='areaBracoE1'></div>
+    <div class='areaTiro' id='areaBracoE2'></div>
+    <div class='areaTiro' id='areaBracoE3'></div>
+
+    <img src='Imagens/oficina/gunHand.PNG' id='gunHand'>
+    <div onClick='gunt()' id='gunTable'></div>
+    <div onClick='openUpg("bcOficina")' id='clickArea'></div>
+  <div id='bcOficina' class='big-container hidden'>
+   <div class='container cOficina' id='upgradeCaWin'>
+    <div id='overlayMorreu'></div>
+    <div class='windowHeader'>
+     <h4>UPGRADES</h4>
+     <img class='xizinho' onClick='closeUpg("bcOficina")' src='Imagens/xizinho.PNG'>
+    </div>
+    <div class='pao'>
+     <div class='miolo'>
+      <div class='itemEsquerdoSeparador'>
+       <img id='truckPreview' src='Imagens/vendinha/truckButton.PNG'>
+       <p style='margin: 0'>Integridade</p>
+       <p id='integridade'>100%</p>
+       <div id='btnReparo' onClick='caminhao.reparo()'>
+        <img src='Imagens/oficina/reparo.PNG'>
+        <p style='margin-top: 0'>Reparar</p>
+        <p style='padding-bottom: 10px' class='value' id='reparotxt'>-</p>
+       </div>
+      </div>
+
+      <div class='grid-container'>
+       <div class='upgrade'>
+        <p class='upgradetxt'>Capacidade</p>
+        <p id='capacidadeP0' class='value'>$100</p>
+        <div class='grupoUp capacidade'> <!-- o nome da classe do atributo precisa ser igual a propriedade do objeto caminhao -->
+         <ul class='upGraph capacidade'>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+         </ul>
+         <img class='maizinho' onClick='upgrade("capacidade")' src='Imagens/oficina/maizinho.PNG'>
+        </div>
+        <p style='margin: 0' id='condicaoAtualcapacidade'>30</p>
+       </div>
+
+       <div class='upgrade'>
+        <p class='upgradetxt'>Refrigeração</p>
+        <p id='refrigeracaoP1' class='value'>$100</p>
+        <div class='grupoUp refrigeracao'>
+         <ul class='upGraph refrigeracao'>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+         </ul>
+         <img class='maizinho' onClick='upgrade("refrigeracao")' src='Imagens/oficina/maizinho.PNG'>
+        </div>
+        <p style='margin: 0' id='condicaoAtualrefrigeracao'>0</p>
+       </div>
+
+       <div class='upgrade'>
+        <p class='upgradetxt'>Motor</p>
+        <p id='motorP2' class='value'>$100</p>
+        <div class='grupoUp motor'>
+         <ul class='upGraph motor'>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+         </ul>
+         <img class='maizinho' onClick='upgrade("motor")' src='Imagens/oficina/maizinho.PNG'>
+        </div>
+        <p style='margin: 0' id='condicaoAtualmotor'>10</p>
+       </div>
+
+       <div class='upgrade'>
+        <p class='upgradetxt'>Durabilidade</p>
+        <p id='refrigeracaoP3' class='value'>$100</p>
+        <div class='grupoUp durabilidade'>
+         <ul class='upGraph durabilidade'>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+          <li class='upUnit'></li>
+         </ul>
+         <img class='maizinho' onClick='upgrade("durabilidade")' src='Imagens/oficina/maizinho.PNG'>
+        </div>
+        <p style='margin: 0' id='condicaoAtualdurabilidade'>10</p>
+       </div>
+
+      </div>
+     </div>
+    </div>
+   </div>
+
+  </div>
+ </div>
+<!-- --------------------------------- OFICINA --------------------------------- -->
+
+  <div id='tutSeta'></div>
+
+
+  <div id='screenSelect'>  
+   <img src='Imagens/fazenda/natureBox.PNG' id='screenbg'>
+   <div id='farmIcon' class='Icon' onClick='mudaCena("Farm")'></div>
+   <div id='truckIcon' class='Icon' onClick='mudaCena("Truck")'></div>
+   <div id='standIcon' class='Icon' onClick='mudaCena("Store")'></div>
+   <div id='oficinaIcon' class='Icon' onClick='mudaCena("Oficina")'></div>
+  </div>  
+
+  <div class='content-container' id='modal' style='display: none'>
+   <p class='content' id='content'>Insuficient funds.</p>
+  </div> 
+
+  
+  <div id='fade' style='display: none'></div>
+
+    <div id='info'>
+     <div class='infoItemsWrapper'>
+      <div class='infoItems'>
+       <img src='Imagens/fazenda/shop/sementeMaca.PNG' class='rtMiniatura'>
+       <p id='sementeMaca'>10</p>
+      </div>
+
+      <div class='infoItems'>
+       <img src='Imagens/fazenda/shop/mudaBanana.PNG' class='rtMiniatura'>
+       <p id='sementeBanana'>0</p>
+      </div>
+
+      <div class='infoItems'>
+       <img src='Imagens/fazenda/shop/sementeAcai.PNG' class='rtMiniatura'>
+       <p id='sementeAcai'>0</p>
+      </div>
+     </div>
+
+     <div class='infoItemsWrapper'>
+      <div class='infoItems'>
+       <img class='rtMiniatura' src='Imagens/vendinha/apple.PNG'>
+       <p id='arvoretxt'>0</p>
+      </div>
+
+      <div class='infoItems'>
+       <img class='rtMiniatura' src='Imagens/vendinha/banana.PNG'>
+       <p id='bananeiratxt'>0</p>
+      </div>
+
+      <div class='infoItems'>
+       <img class='rtMiniatura' src='Imagens/vendinha/acaiFruto.PNG'>
+       <p id='acaizeirotxt'>0</p>
+      </div>
+     </div>
+
+     <div class='infoItemsWrapper'>
+      <div class='infoItems'>
+       <img class='rtMiniatura' src='Imagens/vendinha/appleVenda.PNG'>
+       <p id='macasVendertxt'>0</p>
+      </div>
+
+      <div class='infoItems'>
+       <img class='rtMiniatura' src='Imagens/vendinha/bananaVenda.PNG'>
+       <p id='bananaVendertxt'>0</p>
+      </div>
+
+      <div class='infoItems'>
+       <img class='rtMiniatura' src='Imagens/vendinha/acaiFrutoVenda.PNG'>
+       <p id='acaiVendertxt'>0</p>
+      </div>
+     </div>
+
+     <div class='infoItems'>
+      <img src='Imagens/vendinha/money.PNG' class='rtMiniatura'>
+      <p id='dinheirotxt' style='margin-left: 10px'>0</p>
+     </div>
+
+     <div class='infoItems'>
+      <img src='Imagens/vendinha/fert.PNG' class='rtMiniatura'>
+      <p id='qfert' style='margin-left: 10px'>0</p>
+     </div>
+
+     <div class='infoItems'>
+      <img src='Imagens/fazenda/frutoAscencao.PNG' class='rtMiniatura'>
+      <p id='frutoRedencaotxt' style='margin-left: 10px'>0</p>
+     </div>
+
+     <div style='margin-left: 30px' class='infoItems'>
+      <img class='rtMiniatura' id='estacao' src='Imagens/fazenda/folhaOutono.PNG'>
+      <p id='estacaotxt'>OUTONO</p>
+     </div>
+    </div>
+      
+
+  <script type="text/javascript" src="scripts/utilidades.js"></script>
+  <script type="text/javascript" src="scripts/Fazenda/Pragas.js"></script>>
+  <script type="text/javascript" src="scripts/Fazenda/Resources.js"></script>
+  <script type="text/javascript" src="scripts/Fazenda/Plantacoes.js"></script>
+  <script type="text/javascript" src="scripts/Fazenda/Deposito/deposito.js"></script>
+  <script type="text/javascript" src="scripts/menu.js"></script>
+  <script type="text/javascript" src="scripts/Fazenda/littleFarm.js"></script>
+  <script type="text/javascript" src="scripts/Fazenda/Rega.js"></script>
+  <script type="text/javascript" src="scripts/Fazenda/Semear.js"></script>
+  <script type="text/javascript" src="scripts/Fazenda/plantConstructor.js"></script>
+  <script type="text/javascript" src="scripts/Fazenda/Tokens.js"></script>
+  <script type="text/javascript" src="scripts/Loja/littleStore.js"></script>
+  <script type="text/javascript" src="scripts/Truck/Truck.js"></script>
+  <script type="text/javascript" src="scripts/Truck/Memes.js"></script>
+  <script type="text/javascript" src="scripts/Oficina/gun.js"></script>
+  <script type="text/javascript" src="scripts/Oficina/caminhao.js"></script>
+  <script type="text/javascript" src="scripts/Oficina/upgrades.js"></script>
+
+
+ </body>
+</html> 

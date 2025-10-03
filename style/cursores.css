@@ -1,0 +1,28 @@
+/*------------------------------------------treestyle-------------------------------*/
+.treeSign:hover{
+ opacity: 1;
+ cursor: url('../Imagens/cursores/buy.png'), auto;
+}
+
+.plantdesign:hover{
+ cursor: url('../Imagens/cursores/pointer.png'), auto;
+ opacity: 1;
+}
+
+.choice01:hover{
+ cursor: url('../Imagens/cursores/pointer.png'), auto;
+}
+
+.choice02:hover{
+ cursor: url('../Imagens/cursores/pointer.png'), auto;
+}
+
+.choice03:hover{
+ cursor: url('../Imagens/cursores/pointer.png'), auto;
+}
+
+/*------------------------------------------shopstyle-------------------------------*/
+.shopItens:hover {
+ background-color: rgb(211, 157, 75, 0.7);
+
+}

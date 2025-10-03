@@ -1,0 +1,183 @@
+.tdPraVender{
+ width: 50%;
+ text-align: center;
+}
+
+#vendinha{
+ position: absolute;
+ background-image: url('../Imagens/vendinha/store.PNG');
+ background-repeat:no-repeat;
+}
+
+#feira_menu{
+    position: absolute;
+    margin: 30% 5% 5% 52%;
+}
+
+#truck_holder{
+    position: absolute;
+    margin-top: 450px;
+    margin-left: 20px;
+    width: 10%;
+    font-size: 24px;
+}
+
+#truckButton{
+    opacity: 40%;
+    width: 70%;
+}
+
+#truckTimer{
+    margin-top: -55%;
+    margin-left: 15%;
+    font-size: 70%;
+    position: absolute;
+}
+
+
+#infotxtStore{
+ margin-left: 233px;
+ margin-top: 25px;
+ position: absolute;
+ width: 120px;
+ border: 3px solid black;
+ background-color: #d39d4b;
+ padding-left: 7px;
+ cursor: default;
+ text-align: center;
+}
+
+#dropIconStore{
+ float: right;
+ padding-right: 5px;
+}
+
+#dropIconStore:hover{
+ cursor: url('../Imagens/cursores/pointer.png'), auto;
+}
+
+
+#resTableStore{
+ margin-top: 50px;
+ margin-left: 233px;
+ border: 3px solid black;
+ width: 120px;
+ height: 50px;
+ background-color: #d39d4b;
+}
+
+.td-info{
+ width: 103px;
+ text-align: center;
+ font-size: smaller;
+ padding: 5px 10px 5px 10px;
+}
+
+.td-text{
+ padding-right: 20px;
+}
+
+.rtMiniatura{
+ width: 20px;
+ height: 20px;
+ float: left;
+}
+
+#menuStoreBack{
+ position: absolute;
+ width: 100%;
+ height: 245px;
+ margin-top: 115px;
+ margin-lefy: -20px;
+}
+
+.sellInfo{
+ border: 5px solid black;
+ border-collapse: collapse;
+ background-color: #d39d4b;
+ margin: auto;
+ margin-top: 5px;
+ 
+}
+
+.sellInfoTD{
+ border: 2px solid black;
+}
+
+.vstyle{
+ width: 100%;
+ background-color: #e2bf8b;
+ 
+}
+
+.vstyle:hover {
+  background-color: #ca8c31;
+  cursor: url('../Imagens/cursores/pointer.PNG'), auto;
+}
+
+.inputStore{
+ width: 70px;
+ background-color: #d39d4b;
+ border: none;
+ text-align: center;
+ font-family: 'Brush Script MT', cursive;
+ float: right;
+ outline: none;
+}
+
+.cesta{
+ padding-left: 40px;
+}
+
+.frutaV{
+ position: absolute;
+ width: 70px;
+ margin-left: -110px;
+ margin-top: 15px;
+}
+
+.setasHolder{
+ position: absolute;
+ margin-top: -60px;
+ margin-left: 20px;
+}
+
+.setinhas{
+ position: absolute;
+ opacity: 0.5;
+}
+
+.setinhas:hover{
+ cursor: pointer;
+ opacity: 1;
+}
+
+.bbasket{
+ width: 150px;
+ height: 100px;
+
+ opacity: 0.7;
+}
+
+.bbimg{
+ width: 150px;
+ height: 100px;
+}
+
+.bbasket:hover{
+ cursor: url('../Imagens/cursores/buy.PNG'), auto;
+ opacity: 1;
+}
+
+.bbtxt{
+ position: absolute;
+ width: 150px;
+}
+
+
+
+#bvoltarStore{
+ position: absolute;
+ margin-left: 10px;
+ margin-top: 70px;
+}

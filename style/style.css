@@ -1,0 +1,208 @@
+body, html{
+ height: 100%;
+ width: 100%;
+ margin: 0;
+ overflow: hidden;
+ 
+}
+
+.tableDesign{
+    border: 3px solid black;
+    background-color: #d39d4b;
+    border-spacing: 10px;
+    border-radius: 5%;
+}
+
+#fade{
+ width: 1054px;
+ height: 2000px;
+ position: absolute;
+ background-color: black;
+ margin-top: -800px;
+ opacity: 0;
+}
+
+.content-container{
+ position: absolute;
+ left: 0;
+ right: 0;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 100px;
+ border: 2px solid black; 
+ border-radius: 50px; 
+ text-align: center;
+ width: 20%;
+ background-color: #d39d4b;
+ opacity: 0;
+ padding-left: 10px;
+ padding-right: 10px;
+ 
+}
+
+.content{
+ font-family: 'Brush Script MT', cursive;
+}
+
+
+#initbg{
+
+ background-image: url("../Imagens/inicialbg.PNG");
+ width:100%;
+ height:768px;
+ background-repeat:no-repeat;
+}
+
+.initbtn{
+ width: 200px;
+ height:150px;
+
+ opacity: 0.9;
+}
+
+.initbtnimg{
+ width: 200px;
+ height:150px;
+}
+
+.initbtn:hover{
+ cursor: url('../Imagens/cursores/pointer.PNG'), auto;
+ opacity: 1;
+ 
+}
+
+.btntext{
+ position: absolute;
+ left: 0; 
+ right: 0; 
+ margin-left: 30px; 
+ margin-top: -65px;
+ font-family: 'Brush Script MT', cursive;
+ font-size: 24px;
+ width: 140px;
+ text-align: center;
+ 
+}
+
+#sm{
+ width: 100%;
+ position: absolute;
+ margin-top: -290px;
+}
+
+
+
+label{
+ font-family: 'Brush Script MT', cursive;
+ color: #d39d4b;
+}
+
+th{
+ font-family: 'Brush Script MT', cursive;
+}
+
+td{
+ font-family: 'Brush Script MT', cursive;
+}
+
+#screenSelect{
+ position: absolute;
+ margin-top: 500px;
+ margin-left: 350px;
+ display:none;
+ z-index: 20;
+}
+
+.visible{
+ visibility: visible;
+}
+
+.hidden{
+ visibility: hidden;
+}
+
+.positionRelative{
+ position: relative;
+}
+
+.positionAbsolute{
+ position: absolute;
+}
+
+.container{
+    display: flex;
+    background-color: #d39d4b;
+    border: 3px solid black;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 11;
+}
+
+#screenbg{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -3px;
+    height: 92px;
+    width: 312px;
+}
+
+#tutSeta{
+ background-image: url('../Imagens/seta.PNG');
+ height: 70px;
+ width: 70px;
+ background-size: contain;
+ background-repeat: no-repeat;
+ position: absolute;
+ margin-left: 840px;
+ margin-top: 440px;
+}
+
+.Icon{
+ opacity: 0.8;
+ background-size: contain;
+ background-repeat: no-repeat;
+ width: 30px;
+ height: 30px;
+ margin-top: 35px;
+ position: absolute;
+}
+
+.Icon:hover{
+ opacity: 1;
+ cursor: url('../Imagens/cursores/pointer.PNG'), auto;
+}
+
+#farmIcon{
+ background-image: url('../Imagens/farmIcon.PNG');
+ margin-left: 30px;
+}
+
+#standIcon{
+ background-image: url('../Imagens/standIcon.PNG');
+ margin-left: 130px;
+ margin-top: 37px;
+}
+
+#truckIcon{
+ background-image: url('../Imagens/truckIcon.PNG');
+ margin-left: 80px;
+ margin-top: 37px;
+}
+
+#oficinaIcon{
+    background-image: url(../Imagens/oficinaIcon.PNG);
+    margin-left: 180px;
+    margin-top: 37px;
+}
+
+.background{
+ width: 960px;
+ height: 100%;
+}
+
+.Circle{
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
