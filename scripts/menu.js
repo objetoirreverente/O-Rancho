@@ -245,7 +245,7 @@ const ctxMacieira = new ctxMenu(document.getElementsByClassName('shopItens')[0],
  `Imagens/fazenda/shop/sementeMaca.PNG`,
  `<p>Máximo de colheitas: ${plantacao.macieira.colheitasMax}</p>
   <p>Estagio adulto: ${plantacao.macieira.grownStage}</p>
-  <p>Frutos por colheita: ${plantacao.macieira.frutoQ}</p>
+  <p>Frutos por colheita: ${plantacao.macieira.frutos}</p>
   <p>Estagios de crescimento: ${plantacao.macieira.qestagios}</p>`
 );
 
@@ -254,7 +254,7 @@ const ctxBananeira = new ctxMenu(document.querySelectorAll('.shopItens')[1],
  `Imagens/fazenda/shop/mudaBanana.PNG`,
  `<p>Máximo de colheitas: ${plantacao.bananeira.colheitasMax}</p>
   <p>Estagio adulto: ${plantacao.bananeira.grownStage}</p>
-  <p>Frutos por colheita: ${plantacao.bananeira.frutoQ}</p>
+  <p>Frutos por colheita: ${plantacao.bananeira.frutos}</p>
   <p>Estagios de crescimento: ${plantacao.bananeira.qestagios}</p>`
 );
 
@@ -263,7 +263,7 @@ const ctxAcai = new ctxMenu(document.querySelectorAll('.shopItens')[2],
  `Imagens/fazenda/shop/sementeAcai.PNG`,
  `<p>Máximo de colheitas: ${plantacao.acaizeiro.colheitasMax}</p>
   <p>Estagio adulto: ${plantacao.acaizeiro.grownStage}</p>
-  <p>Frutos por colheita: ${plantacao.acaizeiro.frutoQ}</p>
+  <p>Frutos por colheita: ${plantacao.acaizeiro.frutos}</p>
   <p>Estagios de crescimento: ${plantacao.acaizeiro.qestagios}</p>`
 );
 

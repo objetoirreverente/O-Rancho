@@ -28,7 +28,7 @@ class Plantacoes{
    name: 'arvore', 
    seed: sementeMaca,
    qestagios: 6, 
-   canAge: true,
+   canAge: true, //Se a planta muda de aparencia com o tempo
    colheitasMax: 30, 
    //propriedades: new Propriedades('arvore', 3, 'sementeMaca', 10, arvore, sementeMaca, 6, 30),
  
@@ -205,7 +205,7 @@ class Plantacoes{
     document.getElementsByClassName('arvoreHolder')[index-1].style.visibility = 'visible';  
     document.getElementById('treeSign' + index).style.visibility = 'hidden';
 
-    recursos.money.Take(100);
+    recursos.Take(recursos.money, 100);
    } 
    else {
     modal('Insuficient funds');

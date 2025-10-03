@@ -1,27 +1,30 @@
-  const money = {
+
+
+class Resources{
+ constructor(){
+   this.sementesQuantidade = 0;
+
+  this.money = {
    quantidade: 10,
    dom: document.getElementById('dinheirotxt'),
 
-   Set: ()=>{
-    console.log(this);
+   Set(){
     this.dom.innerHTML = this.quantidade;
     this.checkValues();
    },
 
-   Take: (q)=>{
+   Take(q){
       this.quantidade -= q;
       this.Set();
    },
 
-   Add: (q)=>{
-      console.log(this.quantidade);
+   Add(q){
       this.quantidade += q;
-      console.log(this.quantidade);
       this.Set();
    },
 
 
-   checkValues: ()=>{
+   checkValues(){
     const values = document.getElementsByClassName('value');
     const maizinho = document.getElementsByClassName('maizinho');
 
@@ -34,7 +37,7 @@
       
       if(ehOficina && !cabaMorreuB && caminhao.canUpg(upgId)){
        const index = parseInt(values[i].id.charAt(values[i].id.length - 1));
-       maizinho[index].style.display = 'visible';
+       maizinho[index].style.display = 'block';
       }
      }
      else{
@@ -42,22 +45,22 @@
 
       if(ehOficina){
        const index = parseInt(values[i].id.charAt(values[i].id.length - 1));
-       maizinho[index].style.visibility = 'hidden';
+       maizinho[index].style.display = 'none';
       }
      }
     }
    }
   }
 
-  const inseticida = {
+  this.inseticida = {
    quantidade: 0,
    dom: [document.getElementById('qfert'),
         document.getElementById('inseticidaPreco')],
    price: 50,
 
-   Buy: ()=>{
-    if(money.quantidade >= this.price){
-     money.Take(this.price);
+   Buy(){
+    if(recursos.money.quantidade >= this.price){
+     recursos.Take(recursos.money, this.price);
      this.quantidade++;
      this.Set(); 
     }
@@ -66,29 +69,14 @@
     }
    },
 
-  Add: (q)=>{
-   this.quantidade += q;
-   this.Set();
-  },
-
-  Take: (q)=>{
-   console.log(q);
-   this.quantidade -= q;
-   this.Set();
-  },
-
-   Set: ()=>{
+   Set(){
     this.dom[0].innerHTML = this.quantidade;
     this.dom[1].innerHTML = this.price;
    }
-  } 
+  }   
 
-money.Set();
-inseticida.Set();
-
-class Resources{
- constructor(){
-   this.sementesQuantidade = 0;  
+  this.money.Set();
+  this.inseticida.Set();
  }
 
   Add(q){
@@ -127,8 +115,8 @@ class Sementes extends Resources{
    }
 
     Buy(){
-     if(money.quantidade >= this.price){
-      money.Take(this.price);
+     if(this.money.quantidade >= this.price){
+      this.money.Take(this.price);
       this.Add(1);
       document.getElementsByClassName('choice0' + this.index)[0].innerHTML = this.quantidade + 'x';
       if(tut == 1){
@@ -152,7 +140,7 @@ class Sementes extends Resources{
    }
 }
 
-//const recursos = new Resources();
+const recursos = new Resources();
 
 const arvore = new Frutos('arvore');
 const bananeira = new Frutos('bananeira');
@@ -160,8 +148,6 @@ const acaiVender = new Frutos('acaiVender');
 const acaizeiro = new Frutos('acaizeiro');
 const frutoRedencao = new Frutos('frutoRedencao');
 const macasVender = new Frutos('macasVender');
-macasVender.Add(10);
-
 const bananaVender = new Frutos('bananaVender');
 
 const sementeMaca = new Sementes('Maca', 10);

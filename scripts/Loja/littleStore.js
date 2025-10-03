@@ -110,7 +110,7 @@ class Slot{
 
          moveElement('frutaV' + index, '40px', '-90px');
 
-         money.Add(preco * quantidade);
+         recursos.money.Add(preco * quantidade);
         });
     }
     else{
@@ -129,10 +129,10 @@ class Slot{
  }
 
  compra_cesta(){
-  if(money.quantidade >= 100){
+  if(recursos.money.quantidade >= 100){
    manipulacoes('esconder', 'bslot' + this.index);
    manipulacoes('mostrar', 'cestaHolder' + this.index);
-   money.Take(100);
+   recursos.money.Take(100);
   }
   else{
    modal("Insuficient funds");
