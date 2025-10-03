@@ -110,7 +110,7 @@ td{
  margin-top: 500px;
  margin-left: 350px;
  display:none;
- z-index: 20;
+ z-index: 10;
 }
 
 .visible{

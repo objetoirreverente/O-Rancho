@@ -205,7 +205,7 @@ class Plantacoes{
     document.getElementsByClassName('arvoreHolder')[index-1].style.visibility = 'visible';  
     document.getElementById('treeSign' + index).style.visibility = 'hidden';
 
-    recursos.Take(recursos.money, 100);
+    recursos.money.Take(100);
    } 
    else {
     modal('Insuficient funds');

@@ -1,10 +1,4 @@
-
-
-class Resources{
- constructor(){
-   this.sementesQuantidade = 0;
-
-  this.money = {
+  const money = {
    quantidade: 10,
    dom: document.getElementById('dinheirotxt'),
 
@@ -19,7 +13,9 @@ class Resources{
    },
 
    Add(q){
+      console.log(this.quantidade);
       this.quantidade += q;
+      console.log(this.quantidade);
       this.Set();
    },
 
@@ -52,7 +48,7 @@ class Resources{
    }
   }
 
-  this.inseticida = {
+  const inseticida = {
    quantidade: 0,
    dom: [document.getElementById('qfert'),
         document.getElementById('inseticidaPreco')],
@@ -73,10 +69,14 @@ class Resources{
     this.dom[0].innerHTML = this.quantidade;
     this.dom[1].innerHTML = this.price;
    }
-  }   
+  } 
 
-  this.money.Set();
-  this.inseticida.Set();
+money.Set();
+inseticida.Set();
+
+class Resources{
+ constructor(){
+   this.sementesQuantidade = 0;  
  }
 
   Add(q){
@@ -115,8 +115,8 @@ class Sementes extends Resources{
    }
 
     Buy(){
-     if(this.money.quantidade >= this.price){
-      this.money.Take(this.price);
+     if(money.quantidade >= this.price){
+      money.Take(this.price);
       this.Add(1);
       document.getElementsByClassName('choice0' + this.index)[0].innerHTML = this.quantidade + 'x';
       if(tut == 1){
@@ -140,7 +140,7 @@ class Sementes extends Resources{
    }
 }
 
-const recursos = new Resources();
+//const recursos = new Resources();
 
 const arvore = new Frutos('arvore');
 const bananeira = new Frutos('bananeira');

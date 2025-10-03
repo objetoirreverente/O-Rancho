@@ -47,13 +47,13 @@ const caminhao = {
   this.btnReparo.style.display = 'none';
   this.integridade = 100;
   document.getElementById('integridade').innerHTML = this.integridade;
-  recursos.Take(recursos.money, this.precoReparo);
-  recursos.money.checkValues();
+  money.Take(this.precoReparo);
+  money.checkValues();
   document.getElementById('reparotxt').innerHTML = '-';
  },
 
  canUpg(att){
-  return this[att].atual < this[att].max && recursos.money.quantidade > 100;
+  return this[att].atual < this[att].max && money.quantidade > 100;
  }
 };
 
