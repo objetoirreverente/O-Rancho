@@ -53,7 +53,12 @@ const caminhao = {
  },
 
  canUpg(att){
-  return this[att].atual < this[att].max && recursos.money.quantidade > 100;
+   console.log("this[att]?.atual ?? 0 " + this[att]?.atual ?? 0);
+   console.log("this[att]?.max ?? 0 " + this[att]?.max ?? 0);
+   console.log("recursos.money.quantidade " + recursos.money.quantidade);
+   console.log("((this[att]?.atual ?? 0) < (this[att]?.max ?? 0)) && (recursos.money.quantidade > 100) " + ((this[att]?.atual ?? 0) < (this[att]?.max ?? 0)) && (recursos.money.quantidade > 100));
+
+   return ((this[att]?.atual ?? 0) < (this[att]?.max ?? 0)) && (recursos.money.quantidade > 100);
  }
 };
 
