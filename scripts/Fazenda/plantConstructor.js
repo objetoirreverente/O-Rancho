@@ -52,11 +52,11 @@ function Criar(especie, index){
  },
 
  inseticida(){
-  if(recursos.inseticida.quantidade && !this.inseticidado){
+  if(inseticida.quantidade && !this.inseticidado){
    const h = this.praga.isHappening;
    this.inseticidado = true;
    manipulacoes("mostrar", 'tinseticida' + this.index);
-   recursos.Take(recursos.inseticida, 1);
+   inseticida.Take(1);
    if(h){
     this.inseticidado = false;
     this.praga.consequence('stop', '', 'i');

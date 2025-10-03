@@ -55,8 +55,8 @@
    price: 50,
 
    Buy(){
-    if(recursos.money.quantidade >= this.price){
-     recursos.Take(recursos.money, this.price);
+    if(money.quantidade >= this.price){
+     money.Take(this.price);
      this.quantidade++;
      this.Set(); 
     }
@@ -64,6 +64,17 @@
      modal('Insuficient funds');
     }
    },
+
+  Add(q){
+   this.quantidade += q;
+   this.Set();
+  }
+
+  Take(q){
+   console.log(q);
+   this.quantidade -= q;
+   this.Set();
+  }
 
    Set(){
     this.dom[0].innerHTML = this.quantidade;
