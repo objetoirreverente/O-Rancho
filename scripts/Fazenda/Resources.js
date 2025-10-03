@@ -148,6 +148,8 @@ const acaiVender = new Frutos('acaiVender');
 const acaizeiro = new Frutos('acaizeiro');
 const frutoRedencao = new Frutos('frutoRedencao');
 const macasVender = new Frutos('macasVender');
+macasVender.Add(10);
+
 const bananaVender = new Frutos('bananaVender');
 
 const sementeMaca = new Sementes('Maca', 10);

@@ -21,16 +21,16 @@ class Propriedades{
 class Plantacoes{
  constructor(){ 
   this.macieira = { 
-   /*img: 'sementeMaca',
+   img: 'sementeMaca',
    grownStage: 3, 
    frutoQ: 10, 
    fruto: arvore, 
    name: 'arvore', 
    seed: sementeMaca,
    qestagios: 6, 
-   canAge: true, //Se a planta muda de aparencia com o tempo
-   colheitasMax: 30, */
-   propriedades: new Propriedades('arvore', 3, 'sementeMaca', 10, arvore, sementeMaca, 6, 30),
+   canAge: true,
+   colheitasMax: 30, 
+   //propriedades: new Propriedades('arvore', 3, 'sementeMaca', 10, arvore, sementeMaca, 6, 30),
  
    exp: 0,
    expLvl: 5,

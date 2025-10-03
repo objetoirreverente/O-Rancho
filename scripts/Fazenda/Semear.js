@@ -1,8 +1,8 @@
 function Semear(especie, index){
 
-  const _Propriedades = especie.propriedades;
+  //const _Propriedades = especie.propriedades;
   const currentStation = document.getElementById('estacaotxt').innerHTML;
-  const obj = especie[_Propriedades.name + index];
+  const obj = especie[especie.name + index];
 
 
   var currentSegundos = 0;
@@ -66,9 +66,9 @@ function Semear(especie, index){
   }
 
   //Verifica se há semente disponível para plantar ou, se ja for uma planta adulta, repetir o ciclo.
-  if(_Propriedades.seed.quantidade > 0 || obj.grown){
+  if(especie.seed.quantidade > 0 || obj.grown){
    if(!obj.grown){
-    _Propriedades.seed.Take(1);
+    especie.seed.Take(1);
     manipulacoes('trocar', 'plantarSpot'+ index, 'Imagens/fazenda/arvore/prantadoApenas.PNG');
     document.getElementsByClassName('duracaow')[index].style.display = 'block';
     obj.plantado = true;
@@ -78,7 +78,7 @@ function Semear(especie, index){
 
     }  
    }
-   _Propriedades.seed.Set();
+   especie.seed.Set();
    manipulacoes('esconder',"plantar" + obj.index);
 
    obj.temp.on(obj.temp.segundos,
@@ -86,12 +86,12 @@ function Semear(especie, index){
    //A CADA SEGUNDO EXECUTA
    ()=>{
     
-    if(obj.temp.intervaloAtual <= ((_Propriedades.qestagios - obj.estagio)/_Propriedades.qestagios) * obj.temp.intervaloTotal){
-     manipulacoes('trocar', 'plantarSpot' + obj.index, "Imagens/fazenda/" + _Propriedades.name + '/' + _Propriedades.name + obj.estagio + '.PNG');
+    if(obj.temp.intervaloAtual <= ((especie.qestagios - obj.estagio)/especie.qestagios) * obj.temp.intervaloTotal){
+     manipulacoes('trocar', 'plantarSpot' + obj.index, "Imagens/fazenda/" + especie.name + '/' + especie.name + obj.estagio + obj.age + '.PNG');
      var arv1 = document.getElementById("plantarSpot" + obj.index).style;
 
-     if(obj.estagio == _Propriedades.grownStage){
-      switch(_Propriedades.name){
+     if(obj.estagio == especie.grownStage){
+      switch(especie.name){
        case "acaizeiro":
         obj.praga.consequence('start', 'formiga');
         break;
@@ -133,7 +133,7 @@ function Semear(especie, index){
        }          
       }
 
-      if(_Propriedades.qestagios == obj.estagio){
+      if(especie.qestagios == obj.estagio){
        obj.carregada = true;   
       }
      obj.estagio++;
